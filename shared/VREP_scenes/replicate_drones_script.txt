@@ -1,0 +1,27 @@
+for j=1,99 do
+print(j)
+simRemoveObjectFromSelection(sim_handle_all)
+os.execute('sleep ' .. tonumber(1))
+sim.addObjectToSelection(sim_handle_tree,sim.getObjectHandle('Quad_Frame#0'))
+os.execute('sleep ' .. tonumber(1))
+simCopyPasteSelectedObjects()
+os.execute('sleep ' .. tonumber(1))
+selectedObjectHandles=sim.getObjectSelection()
+os.execute('sleep ' .. tonumber(1))
+print('copied and pasted')
+
+for i,obj in ipairs(selectedObjectHandles) do 
+objectName = sim.getObjectName(obj)
+is_root=string.find(objectName, "Quad_Frame")
+pos=string.find(objectName, "%d+")
+if is_root~=nil then
+    quadName = sim.getObjectName(obj) 
+    quadID, name = sim.getNameSuffix(quadName)
+    position = sim.getObjectPosition(obj, -1)
+    position[2]=0.25*(quadID+1)
+    sim.setObjectPosition(obj, -1,position)
+    print('quad object = [' .. obj .. ']\nquad name = [' .. quadName .. ']\nquad suffix = [' .. quadID .. ']')
+end
+end
+os.execute('sleep ' .. tonumber(1))
+end

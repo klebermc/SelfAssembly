@@ -1,0 +1,39 @@
+# MATLAB / Simulink
+*.asv
+*.m~
+slprj/
+*_ert_rtw/
+*.slxc
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+
+# OS / editor
+.DS_Store
+._.DS_Store
+.vscode/
+.idea/
+
+# Raw videos, kept locally until uploaded to YouTube (too large for git)
+*/videos/
+
+# Files that embed local paths; kept on this machine only
+local_only/
+
+# Generated binaries and simulator bindings (copy the remote API from your V-REP install)
+*.mex*
+remApi.m
+remoteApiProto.m
+remoteApi.dll
+remoteApi.so
+remoteApi.dylib
+
+# Simulink Coder ROS packages (generated; contain MathWorks headers)
+*.tgz
