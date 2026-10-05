@@ -6,6 +6,10 @@ Umbrella repository for Kleber Cabral's robotic self-assembly research cluster (
 2019-2023): a series of papers on decentralized strategies for multi-robot self-assembly
 of 3D structures, sharing common simulation infrastructure and real-hardware validation.
 
+![Real quadrotor blocks assembling a 6-block staircase, next to the block positions over time](real-uavs/assembly_stairs_6blocks.gif)
+
+*Real quadrotor blocks assembling a 6-block staircase (JIRS 2023), played at 4x speed. Full video: [youtu.be/WJ4kyx_M0xs](https://youtu.be/WJ4kyx_M0xs).*
+
 One repo, one subfolder per paper, with the simulation infrastructure they all build on
 factored out into `shared/` instead of duplicated per paper.
 
