@@ -216,7 +216,7 @@ count=0;
 
 t=dt;
 
-load('current_state_21_11_03_16_57_47.mat') % full-workspace snapshot saved during a flight (line ~968); not included in the repo
+%load('current_state_21_11_03_16_57_47.mat') % resumes from a full-workspace snapshot saved during a flight (line ~968); the snapshot is not included in the repo, so the run starts from the beginning
 
 
 %% Simulation Loop
